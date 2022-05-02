@@ -13,5 +13,11 @@ const facts = [
 ]
 
 const day = new Date()
-const weekday = day.toLocaleString('pl', {weekday:'long'})
+currentDay.textContent = day.toLocaleString('pl', {weekday:'long'})
 
+const randomFacts = () => {
+	const num = Math.floor(Math.random() * facts.length)
+	funFact.textContent = facts[num]
+}
+
+randomFacts()
